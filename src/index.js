@@ -3,12 +3,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import YTSearch from 'youtube-api-search'
+import { API_KEY } from '../config.json'
 
 import SearchBar from './components/search-bar'
 import VideoList from './components/video-list'
 import VideoDetail from './components/video-detail'
 
-// const API_KEY = process.env.YOUTUBE_API_KEY
+
 
 class App extends React.Component {
   constructor(props) {
