@@ -12,13 +12,15 @@ const SearchBar = React.createClass({
       <div className="search-bar">
         <input
           placeholder={'Search Youtube!'}
-          onChange={this.onChangeHandler}
+          onChange={this.onInputChange}
           value={this.state.term} />
       </div>
     )
   },
-  onChangeHandler: function(event) {
-    this.setState({term: event.target.value})
+  onInputChange: function(event) {
+    const term = event.target.value
+    this.setState({term: term})
+    this.props.onSearchTermChange(term)
   }
 })
 
